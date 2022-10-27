@@ -11,10 +11,10 @@ function App() {
       <h2>Your code here</h2>
 
       <div className="container">
-        <CharacterCard />
-        <CharacterCard />
-        <CharacterCard />
-        <CharacterCard />
+        {
+          data.map(index => {
+          return <CharacterCard name={index.name} image={index.image} status={index.status} species={index.species} origin={index.origin.url} originName={index.origin.name} firstSeen={index.location.url} firstSeenIn={index.location.name} />
+              })}
       </div>
     </div>
   );
